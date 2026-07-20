@@ -8,9 +8,10 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="topbar">
+  <header class="topbar" aria-label="Site identity">
     <a class="site-brand" href="#top" aria-label="The Safe Space Fellowship home">
-      <strong>SAFE SPACE</strong>
+      <strong><span>SAFE</span> <em>SPACE</em></strong>
+      <small>Fellowship</small>
     </a>
   </header>
 
@@ -110,5 +111,18 @@
     <p>SAFE SPACE &bull; Written by Trevor Zhou &bull; Horror / Dark Comedy / Thriller</p>
     <a href="mailto:trevorzhoufilms@gmail.com">trevorzhoufilms@gmail.com</a>
   </footer>
+  <script>
+    const topbar = document.querySelector(".topbar");
+    const hero = document.querySelector(".hero");
+
+    function updateTopbar() {
+      const revealPoint = hero.offsetHeight * 0.72;
+      topbar.classList.toggle("is-visible", window.scrollY > revealPoint);
+    }
+
+    updateTopbar();
+    window.addEventListener("scroll", updateTopbar, { passive: true });
+    window.addEventListener("resize", updateTopbar);
+  </script>
 </body>
 </html>
