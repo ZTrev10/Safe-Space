@@ -3,37 +3,60 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Safe Space Horror Writers Retreat</title>
-  <meta name="description" content="A fictional in-world retreat site from SAFE SPACE, a horror-comedy thriller feature screenplay by Trevor Zhou.">
+  <title>The Safe Space Fellowship</title>
+  <meta name="description" content="A fictional in-world fellowship site from SAFE SPACE, a horror-comedy thriller feature screenplay by Trevor Zhou.">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="topbar">
-    <a href="#about">Back Home</a>
-    <a href="mailto:trevorzhoufilms@gmail.com">retreat@safespacemovie.com</a>
+    <a class="site-brand" href="#top" aria-label="The Safe Space Fellowship home">
+      <strong>SAFE SPACE</strong>
+      <span>Fellowship</span>
+    </a>
+    <nav aria-label="Fellowship navigation">
+      <a href="#about">Fellowship</a>
+      <a href="#schedule">Schedule</a>
+      <a href="#materials">Materials</a>
+      <a href="#project">Project</a>
+      <a class="nav-credit" href="https://trevorzhou.com">Trevor Zhou</a>
+    </nav>
   </header>
 
   <main>
-    <section class="hero" aria-label="Safe Space Horror Writers Retreat">
-      <img src="assets/facade-sm.jpg" alt="Private vineyard estate exterior">
+    <section id="top" class="hero hero--vineyard" aria-label="The Safe Space Fellowship">
+      <img src="assets/hero-vineyard-house.webp" alt="Private vineyard estate and surrounding hills">
       <div class="hero__shade"></div>
       <div class="hero__content">
-        <p class="eyebrow">Private Vineyard Estate &bull; Limited Seats &bull; Invitation Only</p>
+        <p class="eyebrow">A one-week private retreat for emerging horror writers of color</p>
         <h1><span>SAFE</span> <em>SPACE</em></h1>
         <p class="subtitle">Your journey as a horror writer continues here.</p>
-        <p class="intro">A private, immersive retreat with legendary producer Sam White focused on the truth of horror, the business, the craft, and what it takes to build a sustainable career in genre storytelling.</p>
+        <p class="intro">The Safe Space Fellowship is a private, immersive retreat with legendary producer Sam White focused on the truth of horror, the business, the craft, and what it takes to build a sustainable career in genre storytelling.</p>
         <div class="actions">
-          <a class="button" href="#materials">Reservations Closed</a>
+          <a class="button" href="#materials">Applications Closed</a>
           <a class="button button--ghost" href="#project">About the Project</a>
         </div>
+        <dl class="hero__stats" aria-label="Fellowship facts">
+          <div>
+            <dt>Duration</dt>
+            <dd>5 days</dd>
+          </div>
+          <div>
+            <dt>Cohort</dt>
+            <dd>8 writers</dd>
+          </div>
+          <div>
+            <dt>Location</dt>
+            <dd>Private estate</dd>
+          </div>
+        </dl>
       </div>
     </section>
 
     <section id="about" class="section">
       <div class="section__copy">
-        <p class="label">About the Retreat</p>
+        <p class="label">About the Fellowship</p>
         <h2>Five days of focused writing, candid industry talks, group analyses, special guests, and private 1:1 mentorship.</h2>
-        <p>This exclusive retreat is designed for truly motivated writers ready to commit to a new way of thinking, a deeper relationship to fear, and a higher level of sacrifice.</p>
+        <p>This exclusive fellowship is designed for truly motivated writers ready to commit to a new way of thinking, a deeper relationship to fear, and a higher level of sacrifice.</p>
       </div>
       <div class="notice">
         <p>Property subject to availability and change at host discretion. Certain areas may be restricted.</p>
@@ -61,6 +84,36 @@
       </article>
     </section>
 
+    <section id="schedule" class="schedule">
+      <div class="schedule__intro">
+        <p class="label">Daily Structure</p>
+        <h2>Every hour is designed to move fellows closer to the thing they are avoiding.</h2>
+      </div>
+      <div class="timeline" aria-label="Retreat schedule">
+        <article>
+          <span>Morning</span>
+          <div>
+            <h3>Fear Inventory</h3>
+            <p>Guided private writing, scene autopsy, and prompts drawn from the personal material each fellow brings into residence.</p>
+          </div>
+        </article>
+        <article>
+          <span>Afternoon</span>
+          <div>
+            <h3>Group Analysis</h3>
+            <p>Table reads, peer critique, and genre craft sessions focused on escalation, reversals, and the cost of survival.</p>
+          </div>
+        </article>
+        <article>
+          <span>Evening</span>
+          <div>
+            <h3>Producer Sessions</h3>
+            <p>Industry conversations, screenings, and closed-door mentorship with Sam White and invited guests.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
     <section class="split">
       <div>
         <p class="label">The Opportunity</p>
@@ -77,6 +130,34 @@
           <li>Emotional distress may occur during mentorship, critique, private exercises, and breakthrough sessions.</li>
         </ul>
       </div>
+    </section>
+
+    <section class="details" aria-label="Application details">
+      <div>
+        <p class="label">Application Materials</p>
+        <h2>Selected writers arrive with a script, a secret, and a willingness to be changed by both.</h2>
+      </div>
+      <div class="details__grid">
+        <article>
+          <h3>Submission</h3>
+          <p>Feature or pilot sample, artist statement, personal fear inventory, and signed preliminary release.</p>
+        </article>
+        <article>
+          <h3>Eligibility</h3>
+          <p>Emerging genre writers with an active horror project and availability for the full residential program.</p>
+        </article>
+        <article>
+          <h3>Confidentiality</h3>
+          <p>All exercises, guest sessions, cohort work, and mentorship materials remain private to the retreat.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="gallery" aria-label="Estate gallery">
+      <img src="assets/gallery-main-hall.jpg" alt="Main hall at the retreat estate">
+      <img src="assets/gallery-courtyard.jpg" alt="Courtyard at the retreat estate">
+      <img src="assets/gallery-overhang.jpg" alt="Covered outdoor gathering space">
+      <img src="assets/gallery-pool-room.jpg" alt="Pool room at the retreat estate">
     </section>
 
     <section class="testimonials">
@@ -100,16 +181,16 @@
     <section id="materials" class="materials">
       <img src="assets/registration-entry.jpg" alt="Entrance to the retreat estate">
       <div>
-        <p class="label">Registration Closed</p>
+        <p class="label">Applications Closed</p>
         <h2>Five days of focused writing, candid industry talks, group analyses, special guests, and private 1:1 mentorship.</h2>
-        <p>Reservations for the current cohort are closed. To request project materials, contact Trevor Zhou.</p>
+        <p>Applications for the current cohort are closed. To request project materials, contact Trevor Zhou.</p>
         <a class="button" href="mailto:trevorzhoufilms@gmail.com?subject=SAFE%20SPACE%20Project%20Materials">Request Materials</a>
       </div>
     </section>
 
     <section id="project" class="project">
       <p class="label">About the Project</p>
-      <h2>The Safe Space Horror Writers Retreat is a fictional in-world artifact from <em>SAFE SPACE</em>, a horror-comedy thriller feature screenplay by Trevor Zhou.</h2>
+      <h2>The Safe Space Fellowship is a fictional in-world artifact from <em>SAFE SPACE</em>, a horror-comedy thriller feature screenplay by Trevor Zhou.</h2>
       <p><em>SAFE SPACE</em> follows emerging writers of color invited to a legendary horror producer's private vineyard retreat. They think they have finally gotten their big break. But as they are killed off one by one, they discover his celebrated career was built on sacrifice. Theirs.</p>
       <p class="fineprint">This site is not a real fellowship, retreat, contest, employment opportunity, or development program.</p>
     </section>
