@@ -333,11 +333,15 @@ h3 {
 
 .estate {
   display: grid;
-  grid-template-columns: 38% minmax(0, 1fr);
+  grid-template-columns: minmax(370px, 43%) minmax(0, 1fr);
   gap: 34px;
   align-items: start;
   border-top: 1px solid var(--taupe);
   border-bottom: 1px solid var(--taupe);
+}
+
+.estate__heading {
+  font-size: clamp(26px, 2.7vw, 38px);
 }
 
 .estate__carousel {
@@ -366,24 +370,42 @@ h3 {
 }
 
 .carousel-button {
+  appearance: none;
+  -webkit-appearance: none;
   position: absolute;
   z-index: 2;
   top: 50%;
-  display: grid;
-  place-items: center;
-  width: 42px;
-  height: 56px;
+  width: 44px;
+  height: 44px;
   border: 0;
+  border-radius: 0;
   background: transparent;
   color: var(--white);
   cursor: pointer;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 48px;
-  line-height: 1;
   padding: 0;
+  margin: 0;
+  box-shadow: none;
   text-shadow: 0 2px 14px rgba(0, 0, 0, .72);
   transform: translateY(-50%);
   transition: color 180ms ease, text-shadow 180ms ease, transform 180ms ease;
+}
+
+.carousel-button::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 52px;
+  line-height: 1;
+  transform: translate(-50%, -54%);
+}
+
+.carousel-button--prev::before {
+  content: "\2039";
+}
+
+.carousel-button--next::before {
+  content: "\203A";
 }
 
 .carousel-button:hover,
