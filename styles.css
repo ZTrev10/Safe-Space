@@ -289,10 +289,20 @@ h3 {
   line-height: 1.08;
 }
 
+.included,
 .terms {
   border: 1px solid var(--taupe);
   background: #fff8ef;
   padding: 22px;
+}
+
+.included ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.included li + li {
+  margin-top: 10px;
 }
 
 .estate {
