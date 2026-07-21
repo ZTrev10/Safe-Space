@@ -322,10 +322,9 @@ h3 {
 .estate__fineprint {
   margin-top: 22px;
   color: var(--muted);
-  font-family: "Courier New", monospace;
-  font-size: 12px;
-  line-height: 1.35;
-  text-transform: uppercase;
+  font-size: 14px;
+  font-style: italic;
+  line-height: 1.4;
 }
 
 .estate__carousel {
