@@ -307,13 +307,14 @@ h3 {
 }
 
 .included {
-  border-color: var(--red);
-  background: var(--red);
-  color: var(--white);
+  border-color: var(--taupe);
+  border-top: 3px solid var(--red);
+  background: #fff8ef;
+  color: var(--ink);
 }
 
 .included .label {
-  color: var(--taupe);
+  color: var(--red);
 }
 
 .included ul {
