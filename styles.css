@@ -282,7 +282,7 @@ h1 em {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 330px;
   gap: 34px;
-  align-items: end;
+  align-items: start;
 }
 
 h2 {
@@ -315,6 +315,7 @@ h3 {
 
 .included .label {
   color: var(--red);
+  font-size: 12px;
   white-space: nowrap;
 }
 
@@ -342,6 +343,11 @@ h3 {
 .materials h2,
 .project h2 {
   font-size: clamp(26px, 2.7vw, 38px);
+}
+
+.section__heading {
+  font-size: clamp(28px, 2.95vw, 41px);
+  font-weight: 800;
 }
 
 .estate__fineprint {
