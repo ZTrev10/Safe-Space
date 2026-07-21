@@ -137,11 +137,11 @@ a {
 }
 
 .hero--vineyard img {
-  left: 0;
-  width: 100%;
+  left: -80px;
+  width: calc(100% + 120px);
   max-width: none;
-  object-position: 70% center;
-  transform: none;
+  object-position: center center;
+  transform: translateX(30px);
   filter: saturate(.7) contrast(1.08) brightness(.76);
 }
 
