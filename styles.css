@@ -270,7 +270,7 @@ h1 em {
 
 .section {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 320px;
+  grid-template-columns: minmax(0, 1fr) 280px;
   gap: 44px;
   align-items: end;
 }
@@ -307,7 +307,7 @@ h3 {
 
 .estate {
   display: grid;
-  grid-template-columns: minmax(370px, 43%) minmax(0, 1fr);
+  grid-template-columns: minmax(410px, 46%) minmax(0, 1fr);
   gap: 34px;
   align-items: start;
   border-top: 1px solid var(--taupe);
@@ -409,7 +409,7 @@ h3 {
 
 .split {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 430px;
+  grid-template-columns: minmax(0, 1fr) 360px;
   gap: 52px;
 }
 
