@@ -221,6 +221,10 @@ h1 em {
   line-height: 1.02;
 }
 
+.subtitle span {
+  display: block;
+}
+
 .intro {
   max-width: 700px;
   color: #eadfd4;
@@ -277,7 +281,7 @@ h1 em {
 .hero__stats dd {
   margin: 4px 0 0;
   color: var(--white);
-  font-size: 23px;
+  font-size: clamp(19px, 2vw, 23px);
   line-height: 1;
 }
 
@@ -340,6 +344,7 @@ h3 {
   border-bottom: 1px solid var(--taupe);
 }
 
+.section__heading,
 .estate__heading {
   font-size: clamp(26px, 2.7vw, 38px);
 }
