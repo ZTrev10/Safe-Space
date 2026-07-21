@@ -192,11 +192,11 @@ a {
 }
 
 .label {
-  margin: 0 0 16px;
+  margin: 0 0 14px;
   color: var(--gold);
   font-family: "Courier New", monospace;
-  font-size: clamp(13px, 1vw, 14px);
-  font-weight: 700;
+  font-size: clamp(14px, 1.08vw, 15px);
+  font-weight: 800;
   letter-spacing: .08em;
   text-transform: uppercase;
 }
@@ -275,7 +275,7 @@ h1 em {
 .project {
   width: min(1120px, calc(100% - 40px));
   margin: 0 auto;
-  padding: 64px 0;
+  padding: 52px 0;
 }
 
 .section {
@@ -316,6 +316,7 @@ h3 {
 .included .label {
   color: var(--red);
   font-size: 12px;
+  letter-spacing: .06em;
   white-space: nowrap;
 }
 
