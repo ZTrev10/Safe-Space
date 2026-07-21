@@ -192,7 +192,7 @@ a {
 }
 
 .label {
-  margin: 0 0 14px;
+  margin: 0 0 22px;
   color: var(--gold);
   font-family: "Courier New", monospace;
   font-size: clamp(14px, 1.08vw, 15px);
@@ -275,7 +275,7 @@ h1 em {
 .project {
   width: min(1120px, calc(100% - 40px));
   margin: 0 auto;
-  padding: 52px 0;
+  padding: 42px 0;
 }
 
 .section {
@@ -314,6 +314,7 @@ h3 {
 }
 
 .included .label {
+  margin-bottom: 14px;
   color: var(--red);
   font-size: 12px;
   letter-spacing: .06em;
