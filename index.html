@@ -70,6 +70,7 @@
         <p>Fellows stay on site for the full program, sharing meals, pages, screenings, and late-night conversations across the White-Duvall family estate. The distance is part of the design.</p>
       </div>
       <div class="estate__carousel" aria-label="Estate photos">
+        <button class="carousel-button carousel-button--prev" type="button" aria-label="Previous estate photo">&lsaquo;</button>
         <img class="is-active" src="assets/hero-estate.jpg" alt="The private estate entrance and fountain">
         <img src="assets/facade-sm.jpg" alt="Facade of the private estate">
         <img src="assets/entrance-sm.jpg" alt="Entryway at the private estate">
@@ -84,6 +85,7 @@
         <img src="assets/mentorship-living.jpg" alt="Living room prepared for mentorship sessions">
         <img src="assets/registration-entry.jpg" alt="Registration entrance at the estate">
         <img src="assets/workshops-dining.jpg" alt="Long dining table for workshop sessions">
+        <button class="carousel-button carousel-button--next" type="button" aria-label="Next estate photo">&rsaquo;</button>
       </div>
     </section>
 
@@ -130,16 +132,28 @@
     const topbar = document.querySelector(".topbar");
     const heroTitle = document.querySelector(".hero h1");
     const carouselImages = Array.from(document.querySelectorAll(".estate__carousel img"));
+    const previousButton = document.querySelector(".carousel-button--prev");
+    const nextButton = document.querySelector(".carousel-button--next");
     let carouselIndex = 0;
+    let carouselTimer;
 
     function updateBrandReveal() {
       topbar.classList.toggle("show-brand", heroTitle.getBoundingClientRect().bottom <= 0);
     }
 
-    function showNextEstateImage() {
+    function showEstateImage(nextIndex) {
       carouselImages[carouselIndex].classList.remove("is-active");
-      carouselIndex = (carouselIndex + 1) % carouselImages.length;
+      carouselIndex = (nextIndex + carouselImages.length) % carouselImages.length;
       carouselImages[carouselIndex].classList.add("is-active");
+    }
+
+    function showNextEstateImage() {
+      showEstateImage(carouselIndex + 1);
+    }
+
+    function resetCarouselTimer() {
+      window.clearInterval(carouselTimer);
+      carouselTimer = window.setInterval(showNextEstateImage, 3600);
     }
 
     updateBrandReveal();
@@ -147,7 +161,15 @@
     window.addEventListener("resize", updateBrandReveal);
 
     if (carouselImages.length > 1) {
-      window.setInterval(showNextEstateImage, 3600);
+      carouselTimer = window.setInterval(showNextEstateImage, 3600);
+      previousButton.addEventListener("click", () => {
+        showEstateImage(carouselIndex - 1);
+        resetCarouselTimer();
+      });
+      nextButton.addEventListener("click", () => {
+        showNextEstateImage();
+        resetCarouselTimer();
+      });
     }
   </script>
 </body>
