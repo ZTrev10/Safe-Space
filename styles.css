@@ -253,38 +253,6 @@ h1 em {
   text-transform: uppercase;
 }
 
-.hero__stats {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  width: min(640px, 100%);
-  margin: 42px 0 0;
-  border-top: 1px solid rgba(255, 250, 244, .3);
-  border-bottom: 1px solid rgba(255, 250, 244, .3);
-}
-
-.hero__stats div {
-  padding: 16px 18px 15px;
-}
-
-.hero__stats div + div {
-  border-left: 1px solid rgba(255, 250, 244, .22);
-}
-
-.hero__stats dt {
-  color: var(--taupe);
-  font-family: "Courier New", monospace;
-  font-size: 11px;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.hero__stats dd {
-  margin: 4px 0 0;
-  color: var(--white);
-  font-size: clamp(19px, 2vw, 23px);
-  line-height: 1;
-}
-
 .button--ghost {
   border-color: var(--taupe);
   background: transparent;
@@ -559,14 +527,8 @@ footer p {
     grid-template-columns: 1fr;
   }
 
-  .hero__stats,
   .estate__carousel {
     grid-template-columns: 1fr;
-  }
-
-  .hero__stats div + div {
-    border-left: 0;
-    border-top: 1px solid rgba(255, 250, 244, .22);
   }
 
   .estate__carousel {
