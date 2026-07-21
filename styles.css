@@ -226,6 +226,7 @@ h1 em {
 .subtitle {
   margin: 22px 0 10px;
   max-width: 760px;
+  color: var(--white);
   font-size: clamp(27px, 4vw, 50px);
   line-height: 1.02;
 }
