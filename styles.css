@@ -162,7 +162,7 @@ a {
   width: min(980px, calc(100% - 40px));
   margin: 0 auto;
   padding: 120px 0 58px;
-  color: var(--white);
+  color: var(--red);
 }
 
 .hero--vineyard .hero__content {
@@ -363,7 +363,7 @@ h3 {
   border: 0;
   border-radius: 0;
   background: transparent;
-  color: var(--white);
+  color: var(--red);
   cursor: pointer;
   padding: 0;
   margin: 0;
