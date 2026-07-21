@@ -308,7 +308,7 @@ h3 {
 
 .included {
   border-color: var(--taupe);
-  border-top: 3px solid var(--red);
+  border-left: 4px solid var(--red);
   background: #fff8ef;
   color: var(--ink);
 }
@@ -336,7 +336,10 @@ h3 {
 }
 
 .section__heading,
-.estate__heading {
+.estate__heading,
+.split h2,
+.materials h2,
+.project h2 {
   font-size: clamp(26px, 2.7vw, 38px);
 }
 
@@ -474,6 +477,13 @@ h3 {
 
 .project p {
   max-width: 860px;
+}
+
+.project__lead {
+  margin-top: 0;
+  color: var(--white);
+  font-size: 21px;
+  line-height: 1.45;
 }
 
 .fineprint {
