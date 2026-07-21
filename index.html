@@ -127,14 +127,24 @@
     <a href="mailto:trevorzhoufilms@gmail.com">trevorzhoufilms@gmail.com</a>
   </footer>
   <script>
+    const topbar = document.querySelector(".topbar");
+    const heroTitle = document.querySelector(".hero h1");
     const carouselImages = Array.from(document.querySelectorAll(".estate__carousel img"));
     let carouselIndex = 0;
+
+    function updateBrandReveal() {
+      topbar.classList.toggle("show-brand", heroTitle.getBoundingClientRect().bottom <= 0);
+    }
 
     function showNextEstateImage() {
       carouselImages[carouselIndex].classList.remove("is-active");
       carouselIndex = (carouselIndex + 1) % carouselImages.length;
       carouselImages[carouselIndex].classList.add("is-active");
     }
+
+    updateBrandReveal();
+    window.addEventListener("scroll", updateBrandReveal, { passive: true });
+    window.addEventListener("resize", updateBrandReveal);
 
     if (carouselImages.length > 1) {
       window.setInterval(showNextEstateImage, 3600);
