@@ -13,6 +13,13 @@
       <strong><span>SAFE</span> <em>SPACE</em></strong>
       <small>Fellowship</small>
     </a>
+    <nav aria-label="Fellowship navigation">
+      <a href="#about">Fellowship</a>
+      <a href="#estate">Estate</a>
+      <a href="#opportunity">Opportunity</a>
+      <a href="#materials">Materials</a>
+      <a href="#project">Project</a>
+    </nav>
   </header>
 
   <main>
@@ -62,17 +69,25 @@
         <h2>A private vineyard property selected for focus, privacy, and total immersion.</h2>
         <p>Fellows stay on site for the full program, sharing meals, pages, screenings, and late-night conversations across the White-Duvall family estate. The distance is part of the design.</p>
       </div>
-      <div class="estate__gallery" aria-label="Estate photos">
-        <img src="assets/hero-estate.jpg" alt="The private estate entrance and fountain">
+      <div class="estate__carousel" aria-label="Estate photos">
+        <img class="is-active" src="assets/hero-estate.jpg" alt="The private estate entrance and fountain">
         <img src="assets/facade-sm.jpg" alt="Facade of the private estate">
         <img src="assets/entrance-sm.jpg" alt="Entryway at the private estate">
         <img src="assets/pool-sm.jpg" alt="Pool at the private estate">
         <img src="assets/dining-table-sm.jpg" alt="Dining table prepared for fellows">
         <img src="assets/living-room-sm.jpg" alt="Living room gathering space">
+        <img src="assets/community-pool.jpg" alt="Quiet pool area at the estate">
+        <img src="assets/gallery-courtyard.jpg" alt="Courtyard at the private estate">
+        <img src="assets/gallery-main-hall.jpg" alt="Main hall at the private estate">
+        <img src="assets/gallery-overhang.jpg" alt="Covered outdoor gathering space">
+        <img src="assets/gallery-pool-room.jpg" alt="Pool room at the private estate">
+        <img src="assets/mentorship-living.jpg" alt="Living room prepared for mentorship sessions">
+        <img src="assets/registration-entry.jpg" alt="Registration entrance at the estate">
+        <img src="assets/workshops-dining.jpg" alt="Long dining table for workshop sessions">
       </div>
     </section>
 
-    <section class="split">
+    <section id="opportunity" class="split">
       <div>
         <p class="label">The Opportunity</p>
         <h2>One selected fellow will receive a development deal with Sam White Productions.</h2>
@@ -112,17 +127,18 @@
     <a href="mailto:trevorzhoufilms@gmail.com">trevorzhoufilms@gmail.com</a>
   </footer>
   <script>
-    const topbar = document.querySelector(".topbar");
-    const hero = document.querySelector(".hero");
+    const carouselImages = Array.from(document.querySelectorAll(".estate__carousel img"));
+    let carouselIndex = 0;
 
-    function updateTopbar() {
-      const revealPoint = hero.offsetHeight * 0.72;
-      topbar.classList.toggle("is-visible", window.scrollY > revealPoint);
+    function showNextEstateImage() {
+      carouselImages[carouselIndex].classList.remove("is-active");
+      carouselIndex = (carouselIndex + 1) % carouselImages.length;
+      carouselImages[carouselIndex].classList.add("is-active");
     }
 
-    updateTopbar();
-    window.addEventListener("scroll", updateTopbar, { passive: true });
-    window.addEventListener("resize", updateTopbar);
+    if (carouselImages.length > 1) {
+      window.setInterval(showNextEstateImage, 3600);
+    }
   </script>
 </body>
 </html>
