@@ -138,11 +138,10 @@ a {
 
 .hero--vineyard img {
   left: 0;
-  width: 100%;
+  width: 116%;
   max-width: none;
   object-position: center center;
-  transform: translateX(30px) scale(1.08);
-  transform-origin: center center;
+  transform: none;
   filter: saturate(.7) contrast(1.08) brightness(.76);
 }
 
