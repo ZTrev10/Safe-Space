@@ -275,6 +275,10 @@ h1 em {
   align-items: end;
 }
 
+.section--about {
+  padding-top: 32px;
+}
+
 h2 {
   margin: 0 0 16px;
   max-width: 900px;
