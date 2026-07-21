@@ -293,18 +293,10 @@ h3 {
   line-height: 1.08;
 }
 
-.notice,
 .terms {
   border: 1px solid var(--taupe);
   background: #fff8ef;
   padding: 22px;
-}
-
-.notice p {
-  margin: 0;
-  color: var(--muted);
-  font-family: "Courier New", monospace;
-  font-size: 13px;
 }
 
 .estate {
@@ -319,6 +311,15 @@ h3 {
 .section__heading,
 .estate__heading {
   font-size: clamp(26px, 2.7vw, 38px);
+}
+
+.estate__fineprint {
+  margin-top: 22px;
+  color: var(--muted);
+  font-family: "Courier New", monospace;
+  font-size: 12px;
+  line-height: 1.35;
+  text-transform: uppercase;
 }
 
 .estate__carousel {
