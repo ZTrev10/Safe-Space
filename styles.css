@@ -51,7 +51,6 @@ a {
 
 .site-brand {
   display: grid;
-  flex: 0 0 clamp(118px, 15vw, 184px);
   gap: 1px;
   line-height: .9;
   opacity: 0;
@@ -59,6 +58,12 @@ a {
   text-shadow: 0 2px 18px rgba(0, 0, 0, .42);
   transform: translateY(-4px) scale(.96);
   transition: opacity 220ms ease, transform 220ms ease;
+}
+
+@media (min-width: 821px) {
+  .site-brand {
+    flex: 0 0 clamp(118px, 15vw, 184px);
+  }
 }
 
 .topbar.show-brand .site-brand {
