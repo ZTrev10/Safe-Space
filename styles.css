@@ -206,11 +206,13 @@ h1 {
 }
 
 h1 span {
+  display: block;
   color: var(--white);
   font-weight: 800;
 }
 
 h1 em {
+  display: block;
   color: var(--red);
   font-style: italic;
 }
