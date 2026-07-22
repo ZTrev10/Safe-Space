@@ -364,7 +364,21 @@ h3 {
 .estate__heading span,
 .estate__body span {
   display: block;
-  white-space: nowrap;
+}
+
+@media (min-width: 1181px) {
+  .estate__heading span,
+  .estate__body span {
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 1180px) {
+  .estate__heading span,
+  .estate__body span {
+    display: inline;
+    white-space: normal;
+  }
 }
 
 .estate__carousel {
