@@ -120,6 +120,7 @@
   <script>
     const topbar = document.querySelector(".topbar");
     const heroTitle = document.querySelector(".hero h1");
+    const heroTitleAccent = document.querySelector(".hero h1 em");
     const carouselImages = Array.from(document.querySelectorAll(".estate__carousel img"));
     const previousButton = document.querySelector(".carousel-button--prev");
     const nextButton = document.querySelector(".carousel-button--next");
@@ -127,7 +128,16 @@
     let carouselTimer;
 
     function updateBrandReveal() {
-      topbar.classList.toggle("show-brand", heroTitle.getBoundingClientRect().bottom <= 0);
+      const navBottom = topbar.getBoundingClientRect().bottom;
+      const accentRect = (heroTitleAccent || heroTitle).getBoundingClientRect();
+      const revealDistance = accentRect.height / 2 || 1;
+      const revealProgress = Math.min(
+        1,
+        Math.max(0, (navBottom - (accentRect.top + revealDistance)) / revealDistance)
+      );
+
+      topbar.style.setProperty("--brand-reveal", revealProgress.toFixed(3));
+      topbar.classList.toggle("show-brand", revealProgress > 0);
     }
 
     function showEstateImage(nextIndex) {

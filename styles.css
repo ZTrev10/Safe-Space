@@ -47,6 +47,7 @@ a {
   border-bottom: 1px solid rgba(139, 0, 0, .2);
   color: var(--ink);
   backdrop-filter: blur(8px);
+  --brand-reveal: 0;
 }
 
 .site-brand {
@@ -56,7 +57,7 @@ a {
   opacity: 0;
   pointer-events: none;
   text-shadow: 0 2px 18px rgba(0, 0, 0, .42);
-  transform: translateY(-4px) scale(.96);
+  transform: translateY(calc(-4px + (4px * var(--brand-reveal)))) scale(calc(.96 + (.04 * var(--brand-reveal))));
   transition: opacity 220ms ease, transform 220ms ease;
 }
 
@@ -67,9 +68,8 @@ a {
 }
 
 .topbar.show-brand .site-brand {
-  opacity: 1;
+  opacity: var(--brand-reveal);
   pointer-events: auto;
-  transform: translateY(0) scale(1);
 }
 
 .site-brand strong {
