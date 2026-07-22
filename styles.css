@@ -357,6 +357,11 @@ h3 {
   line-height: 1.4;
 }
 
+.estate__heading span,
+.estate__body span {
+  display: block;
+}
+
 .estate__carousel {
   position: relative;
   aspect-ratio: 3 / 2;
@@ -625,6 +630,11 @@ footer p {
 
   .estate__fineprint {
     margin-top: 12px;
+  }
+
+  .estate__heading span,
+  .estate__body span {
+    display: inline;
   }
 
   .split {
