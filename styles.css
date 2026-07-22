@@ -146,7 +146,7 @@ a {
   left: 0;
   width: 116%;
   max-width: none;
-  object-position: center center;
+  object-position: 54% 44%;
   transform: none;
   filter: saturate(.7) contrast(1.08) brightness(.76);
 }
@@ -175,7 +175,7 @@ a {
   width: min(930px, calc(100% - 40px));
   margin-left: clamp(20px, 6vw, 108px);
   margin-right: auto;
-  padding-bottom: 50px;
+  padding-bottom: 26px;
 }
 
 .eyebrow {
