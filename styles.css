@@ -240,16 +240,6 @@ h1 em {
   font-size: 19px;
 }
 
-.hero-status {
-  margin: 18px 0 0;
-  color: var(--taupe);
-  font-family: "Courier New", monospace;
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-}
-
 .actions {
   display: flex;
   flex-wrap: wrap;
