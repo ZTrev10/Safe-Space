@@ -240,6 +240,16 @@ h1 em {
   font-size: 19px;
 }
 
+.hero-status {
+  margin: 18px 0 0;
+  color: var(--taupe);
+  font-family: "Courier New", monospace;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
 .actions {
   display: flex;
   flex-wrap: wrap;
@@ -349,6 +359,13 @@ h3 {
 .section__heading {
   font-size: clamp(28px, 2.95vw, 41px);
   font-weight: 800;
+}
+
+.section__note {
+  max-width: 720px;
+  margin: 18px 0 0;
+  color: var(--muted);
+  font-size: 19px;
 }
 
 .estate__heading {
